@@ -9,3 +9,7 @@ n = int(input())
 for _ in range(n):
     i, j = map(int, input().split())
     print(dp[j] - dp[i])
+
+"""
+    dp[i] = dp[i - 1] + 1 if a[i] == a[i - 1] else dp[i]
+"""

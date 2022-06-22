@@ -136,6 +136,9 @@ class Company(CompanyBase):
             result += overlapp
         return result
 
+    def find_proper_time_for_meeting(self):
+        pass
+
 
 def get_inputs() -> Tuple[Iterable[EpochRange], Iterable[EpochRange]]:
     number_of_entries = int(input())
@@ -165,9 +168,10 @@ def main(
     for meeting_range in second_meeting_ranges:
         company.register_meeting(meeting_range, second_employee)
 
-    return company.overlap_between_two_employees(
-        first_employee, second_employee
-    )
+    return find_proper_time_for_meeting()
+    # return company.overlap_between_two_employees(
+    #     first_employee, second_employee
+    # )
 
 
 def print_result(number: int) -> None:

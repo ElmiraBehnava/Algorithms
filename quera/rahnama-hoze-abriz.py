@@ -5,7 +5,7 @@ def main(aquariums: Iterable[int], operations: Iterable[int]) -> None:
 
     max_capacity = sum(aquariums[1 : len(aquariums) - 1])
     if max_capacity == len(operations):
-        return len(operations)
+        return "No Answer"
     if max_capacity < len(operations):
         return max_capacity + 1
     else:
